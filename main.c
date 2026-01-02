@@ -3,15 +3,15 @@
 #include <stdint.h>
 #include <string.h>
 
-struct uf2_block {
-    // 32 byte header
+struct uf2_block 
+{
     uint32_t magic_start[2];
     uint32_t flags;
     uint32_t target_addr;
     uint32_t payload_size;
     uint32_t block_number;
     uint32_t num_blocks;
-    uint32_t file_size; // or familyID;
+    uint32_t file_size; // or family_id;
     uint8_t data[476];
     uint32_t magic_end;
 };
