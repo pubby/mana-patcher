@@ -22,7 +22,7 @@ int has_extension(const char *filename, const char *ext)
     size_t elen = strlen(ext);
     if (flen < elen) 
         return 0;
-    return strcasecmp(filename + flen - elen, ext) == 0;
+    return strcmp(filename + flen - elen, ext) == 0;
 }
 
 int main(int argc, char *argv[])
